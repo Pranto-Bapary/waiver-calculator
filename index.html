@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- I wrote this code for frontend mentor challenge last year then 
+  i thought of using this design to calculate our waiver calculator app -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Waiver Calculator</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images//favicon-32x32.png" type="image/x-icon">
+
+  <!-- Custom CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+  <!-- Main Section Start -->
+  <main>
+    <!-- Container Start -->
+    <div class="container">
+
+      <!-- Tip Logo Start -->
+      <div class="tip-logo">
+        <img src="images/logo.svg" alt="logo">
+      </div>
+      <!-- Tip Logo End -->
+
+      <!-- Tip Wrapper Start -->
+      <div class="tip-wrapper">
+
+        <!-- Tip Content Left Section Start -->
+        <div class="tip-content-left">
+
+          <!-- Tip Bill Start -->
+          <div class="tip-bill">
+            <label>Credit Fee</label>
+            <div class="input-container">
+              <input type="number" class="input-form" id="bill" placeholder="0">
+              <img src="images/icon-dollar.svg" class="icon-img" alt="dollar icon">
+              <p id="error" class="error"></p>
+            </div>
+          </div>
+          <!-- Tip Bill End -->
+
+          <!-- Tip Percentage Start -->
+          <div class="tip-percentage">
+            <label>Waiver %</label>
+
+            <!-- Tip Percentage Buttons Start -->
+            <div class="tip-percentages">
+              <button class="btn btn-1" value="10"
+                onclick="return validation(),calculateTip(this.value/100)">10%</button>
+              <button class="btn btn-2" value="20"
+                onclick="return validation(),calculateTip(this.value/100)">20%</button>
+              <button class=" btn btn-3" value="30"
+                onclick="return validation(),calculateTip(this.value/100)">30%</button>
+              <button class=" btn btn-4" value="40"
+                onclick="return validation(),calculateTip(this.value/100)">40%</button>
+              <button class=" btn btn-5" value="60"
+                onclick="return validation(),calculateTip(this.value/100)">60%</button>
+              <input type="number" class="custom-tip-box" id="customTipBox" placeholder="Custom"
+                onkeyup="calculateTip(this.value/100)" onclick="calculateTip(this.value/100)">
+            </div>
+            <!-- Tip Percentage Buttons End -->
+
+          </div>
+          <!-- Tip Percentage End -->
+
+          <!-- Number of People Start -->
+          <div class="tip-people-number">
+            <label>No of Credit</label>
+            <div class="input-container">
+              <input type="number" class="tip-people" id="tipPeople" placeholder="0">
+              <img src="images/icon-person.svg" alt="person icon">
+              <p id="error" class="error"></p>
+            </div>
+          </div>
+          <!-- Number of People End -->
+        </div>
+        <!-- Number of Content Left Section End -->
+
+        <!-- Tip Content Right Section Start -->
+        <div class="tip-content-right">
+
+          <!-- Tip Right Wrapper Start -->
+          <div class="tip-right-wrapper">
+
+            <!-- Display Tip Amount Per Person Start -->
+            <div class="inner-wrapper">
+              <div class="tip-amount">
+                <p>Tuition Fees</p>
+                <span>/ after discount</span>
+              </div>
+              <div class="tip-value">
+                <h3 id="displayTipAmount">$0.00</h3>
+              </div>
+            </div>
+            <!-- Display Tip Amount Per Person End -->
+
+            <!-- Display Total Amount Per Person Start -->
+            <div class="inner-wrapper">
+              <div class="tip-amount">
+                <p>Before Mid</p>
+                <span>/ after discount</span>
+              </div>
+              <div class="tip-value">
+                <h3 id="displayMidAmount">$0.00</h3>
+              </div>
+            </div>
+            <!-- Display Total Amount Per Person End -->
+
+            <!-- Display Total Amount Per Person Start -->
+            <div class="inner-wrapper">
+              <div class="tip-amount">
+                <p>Before Final</p>
+                <span>/ after discount</span>
+              </div>
+              <div class="tip-value">
+                <h3 id="displayFinalAmount">$0.00</h3>
+              </div>
+            </div>
+            <!-- Display Total Amount Per Person End -->
+
+
+            <!-- Display Total Amount Per Person Start -->
+            <div class="inner-wrapper">
+              <div class="tip-amount">
+                <p>Semester Fee</p>
+                <span>/ inc reg & it fee</span>
+              </div>
+              <div class="tip-value">
+                <h3 id="displayTotalAmount">$0.00</h3>
+              </div>
+            </div>
+            <!-- Display Total Amount Per Person End -->
+
+            <!-- Reset Button Start -->
+            <div class="button-reset">
+              <button type="submit" class="btn-reset">Reset</button>
+            </div>
+          </div>
+          <!-- Reset Button End -->
+        </div>
+        <!-- Tip Right Wrapper End -->
+      </div>
+      <!-- Tip Wrapper End -->
+    </div>
+    <!-- Container End -->
+  </main>
+  <!-- Main Section Start -->
+
+  <!-- Footer Start -->
+  <footer class="footer">
+    <p>&copy; 2022 By Pranto Bapary. All Rights Reserved.</p>
+  </footer>
+  <!-- Footer End -->
+
+  <!--Main JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

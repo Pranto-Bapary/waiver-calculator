@@ -1,0 +1,346 @@
+/* --------------
+Google Font 
+---------------*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+/* ------------
+Colors 
+-------------*/
+:root {
+  --primary-color: hsl(172, 67%, 45%);
+  --secondary-color: hsl(183, 100%, 15%);
+  --dark-grayish-cyan-1: hsl(186, 14%, 43%);
+  --dark-grayish-cyan-2: hsl(184, 14%, 56%);
+  --light-grayish-cyan-1: hsl(185, 41%, 84%);
+  --light-grayish-cyan-2: hsl(189, 41%, 97%);
+  --white-color: hsl(0, 0%, 100%);
+  --hover-color: #9de9df;
+  --black-color: #111;
+  --label-color: #6f7b7b;
+}
+
+/* ------------
+Basic Resets 
+-------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: var(--light-grayish-cyan-1);
+  height: 100vh;
+}
+
+/* -------------
+Global Styles 
+--------------*/
+
+label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--label-color);
+  margin-bottom: 6px;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+/* ----------------------
+Form Validation Message 
+---------------------*/
+.error {
+  display: inline;
+  position: absolute;
+  top: -27px;
+  right: 0;
+  font-size: 0.9rem;
+  color: red;
+}
+
+/* -------------
+Container
+--------------*/
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+  overflow: hidden;
+}
+
+/* -------------
+Tip Logo
+--------------*/
+.tip-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tip-logo img {
+  width: 80px;
+  height: 50px;
+}
+
+/* -------------
+Tip Wrapper 
+--------------*/
+.tip-wrapper {
+  max-width: 900px;
+  width: 100%;
+  padding: 30px;
+  background: var(--white-color);
+  border-radius: 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 0.5rem;
+}
+
+/* -----------------
+Tip Left Section 
+------------------*/
+.tip-content-left {
+  padding: 20px;
+}
+
+/* -------------
+Tip Bill
+--------------*/
+.tip-content-left .tip-bill {
+  margin-bottom: 30px;
+}
+
+.tip-content-left .tip-bill .input-container,
+.tip-content-left .tip-people-number .input-container {
+  position: relative;
+}
+.tip-content-left .tip-bill .input-container img,
+.tip-content-left .tip-people-number .input-container img {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+}
+
+.tip-content-left .tip-bill .input-form,
+.tip-content-left .tip-people-number .tip-people {
+  width: 100%;
+  height: 45px;
+  padding: 15px;
+  background: var(--light-grayish-cyan-2);
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.tip-content-left .tip-percentages .custom-tip-box {
+  text-align: center;
+}
+
+.tip-content-left .tip-bill .input-form:focus,
+.tip-content-left .tip-bill .input-form:active,
+.tip-content-left .tip-people-number .tip-people:focus,
+.tip-content-left .tip-people-number .tip-people:active,
+.tip-content-left .tip-percentages .custom-tip-box:focus,
+.tip-content-left .tip-percentages .custom-tip-box:active {
+  border: 2px solid var(--primary-color);
+}
+
+/* -------------
+Tip Percentage 
+--------------*/
+.tip-percentages {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 30px;
+}
+
+/* ---------------------
+Tip Percentage Buttons
+---------------------*/
+.tip-percentages .btn {
+  display: inline-block;
+  padding: 12px 40px;
+  background: var(--secondary-color);
+  color: var(--white-color);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.tip-percentages .btn:hover {
+  background: var(--hover-color);
+  color: var(--black-color);
+}
+
+.tip-percentage label {
+  margin-bottom: 10px;
+}
+
+/*-----------------------------
+ Custom Tip Input Percentage  
+ ---------------------------*/
+.tip-percentages input {
+  height: 50px;
+  width: 100%;
+  padding: 28px 5px;
+  background: var(--light-grayish-cyan-2);
+  border-radius: 5px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.tip-percentages input::placeholder {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* -----------------
+Tip Right Section
+------------------*/
+.tip-content-right {
+  background: var(--secondary-color);
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* -----------------
+Tip Right Wrapper
+------------------*/
+.tip-right-wrapper {
+  padding: 30px 40px;
+}
+
+.inner-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 24px;
+}
+
+.inner-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+/* -----------------
+Tip Amount Display
+------------------*/
+.tip-amount p {
+  color: var(--white-color);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.tip-amount span {
+  color: var(--dark-grayish-cyan-2);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.tip-value {
+  text-align: right;
+}
+
+.tip-value h3 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+}
+
+/* ------------
+Reset Button
+------------*/
+.btn-reset {
+  width: 100%;
+  height: 40px;
+  background: var(--hover-color);
+  color: var(--black-color);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  transition: 0.5s ease-in-out;
+}
+
+.btn-reset:hover {
+  background: var(--primary-color);
+  color: var(--black-color);
+}
+
+/* --------------
+Footer Section
+--------------*/
+.footer {
+  text-align: center;
+}
+
+.footer p {
+  padding: 21px 10px;
+}
+
+/* -------------
+Responsive 
+--------------*/
+/*------------------- When Viewport Width is less than or equal to 800px ------------------------*/
+@media screen and (max-width: 800px) {
+  .tip-percentages .btn {
+    padding: 12px 35px;
+  }
+}
+/*--------x---------- When Viewport Width is less than or equal to 800px ------------x-----------*/
+
+/*------------------- When Viewport Width is less than or equal to 767px ------------------------*/
+@media screen and (max-width: 767px) {
+  .tip-wrapper {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding-bottom: 65px;
+  }
+  .tip-content-left {
+    padding: 0;
+  }
+
+  .tip-content-right {
+    margin-top: 30px;
+  }
+}
+/*--------x---------- When Viewport Width is less than or equal to 767px ------------x-----------*/
+
+/*------------------- When Viewport Width is less than or equal to 574px ------------------------*/
+@media screen and (max-width: 574px) {
+  .tip-value h3 {
+    font-size: 1.6rem;
+  }
+}
+/*--------x---------- When Viewport Width is less than or equal to 574px ------------x-----------*/
+
+/*------------------- When Viewport Width is less than or equal to 400px ------------------------*/
+@media screen and (max-width: 400px) {
+  .tip-percentages {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 1rem;
+  }
+}
+/*--------x---------- When Viewport Width is less than or equal to 400px ------------x-----------*/
