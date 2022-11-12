@@ -305,6 +305,14 @@ Footer Section
   padding: 21px 10px;
 }
 
+.footer p a{
+  text-decoration: none;
+}
+
+.footer p a:hover{
+  color: black;
+  transition: .2s ease;
+}
 /* -------------
 Responsive 
 --------------*/
