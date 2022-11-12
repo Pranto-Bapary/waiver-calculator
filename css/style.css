@@ -74,7 +74,7 @@ Container
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 20px 0;
   overflow: hidden;
 }
 
@@ -117,6 +117,10 @@ Tip Left Section
 Tip Bill
 --------------*/
 .tip-content-left .tip-bill {
+  margin-bottom: 30px;
+}
+
+.tip-content-left .tip-people-number{
   margin-bottom: 30px;
 }
 
@@ -323,7 +327,7 @@ Responsive
   }
 
   .tip-content-right {
-    margin-top: 30px;
+    margin-top: 7px;
   }
 }
 /*--------x---------- When Viewport Width is less than or equal to 767px ------------x-----------*/
