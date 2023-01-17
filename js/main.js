@@ -14,7 +14,7 @@ const tipAmountDisplay = document.getElementById('displayTipAmount')
 const totalAmountDisplay = document.getElementById('displayTotalAmount')
 const displayMidAmount = document.getElementById('displayMidAmount')
 const displayFinalAmount = document.getElementById('displayFinalAmount')
-const regFee = Number(11100)
+const regFee = Number(15700)
 let resetButton = document.querySelector('.btn-reset')
 const errorMsg = document.querySelectorAll('.error')
 
