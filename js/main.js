@@ -27,7 +27,7 @@ function calculateTip(tip) {
     const tipAmount = parseFloat(bill.value) * parseFloat(tip)
     const finalTip = parseFloat(bill.value) - parseFloat(tipAmount)
     const totalAmount = parseFloat(finalTip) * parseFloat(people.value)
-    const finalAmount = parseFloat(totalAmount) + parseFloat(5000)
+    const finalAmount = parseFloat(totalAmount) + parseFloat(7700)
 
     tipAmountDisplay.innerHTML = "$" + Number.parseFloat(totalAmount)
     totalAmountDisplay.innerHTML = "$" + Number.parseFloat(finalAmount)
