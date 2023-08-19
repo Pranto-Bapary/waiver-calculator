@@ -14,7 +14,7 @@ const tipAmountDisplay = document.getElementById('displayTipAmount')
 const totalAmountDisplay = document.getElementById('displayTotalAmount')
 const displayMidAmount = document.getElementById('displayMidAmount')
 const displayFinalAmount = document.getElementById('displayFinalAmount')
-const regFee = Number(11100)
+const regFee = Number(15700)
 let resetButton = document.querySelector('.btn-reset')
 const errorMsg = document.querySelectorAll('.error')
 
@@ -27,12 +27,12 @@ function calculateTip(tip) {
     const tipAmount = parseFloat(bill.value) * parseFloat(tip)
     const finalTip = parseFloat(bill.value) - parseFloat(tipAmount)
     const totalAmount = parseFloat(finalTip) * parseFloat(people.value)
-    const finalAmount = parseFloat(totalAmount) + parseFloat(5000)
+    const finalAmount = parseFloat(totalAmount) + parseFloat(7700)
 
     tipAmountDisplay.innerHTML = "$" + Number.parseFloat(totalAmount)
     totalAmountDisplay.innerHTML = "$" + Number.parseFloat(finalAmount)
-    displayMidAmount.innerHTML = "$" + Number.parseFloat((finalAmount - regFee) / 2)
-    displayFinalAmount.innerHTML = "$" + Number.parseFloat((finalAmount - regFee) / 2)
+    displayMidAmount.innerHTML = "$" + Number.parseFloat((finalAmount - regFee) * 0.6)
+    displayFinalAmount.innerHTML = "$" + Number.parseFloat((finalAmount - regFee) * 0.4)
 
 }
 
