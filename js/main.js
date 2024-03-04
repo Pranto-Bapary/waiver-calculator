@@ -31,8 +31,8 @@ function calculateTip(tip) {
 
     tipAmountDisplay.innerHTML = "$" + Number.parseFloat(totalAmount)
     totalAmountDisplay.innerHTML = "$" + Number.parseFloat(finalAmount)
-    displayMidAmount.innerHTML = "$" + Number.parseFloat((finalAmount - regFee) * 0.6)
-    displayFinalAmount.innerHTML = "$" + Number.parseFloat((finalAmount - regFee) * 0.4)
+    displayMidAmount.innerHTML = "$" + Number.parseFloat((finalAmount - regFee) * 0.5)
+    displayFinalAmount.innerHTML = "$" + Number.parseFloat((finalAmount - regFee) * 0.5)
 
 }
 
