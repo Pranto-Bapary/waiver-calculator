@@ -83,12 +83,11 @@ Tip Logo
 --------------*/
 .tip-logo {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-.tip-logo img {
-  width: 80px;
-  height: 50px;
+.tip-heading {
+  color: rgb(61, 102, 102);
 }
 
 /* -------------
@@ -120,7 +119,7 @@ Tip Bill
   margin-bottom: 30px;
 }
 
-.tip-content-left .tip-people-number{
+.tip-content-left .tip-people-number {
   margin-bottom: 30px;
 }
 
@@ -305,13 +304,13 @@ Footer Section
   padding: 21px 10px;
 }
 
-.footer p a{
+.footer p a {
   text-decoration: none;
 }
 
-.footer p a:hover{
+.footer p a:hover {
   color: black;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 /* -------------
 Responsive 
@@ -328,7 +327,7 @@ Responsive
 @media screen and (max-width: 767px) {
   .tip-wrapper {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    padding-bottom: 65px;
+    padding-bottom: 47px;
   }
   .tip-content-left {
     padding: 0;
