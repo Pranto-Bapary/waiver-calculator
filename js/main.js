@@ -29,10 +29,10 @@ function calculateTip(tip) {
     const totalAmount = parseFloat(finalTip) * parseFloat(people.value)
     const finalAmount = parseFloat(totalAmount) + parseFloat(7700)
 
-    tipAmountDisplay.innerHTML = "$" + Number.parseFloat(totalAmount)
-    totalAmountDisplay.innerHTML = "$" + Number.parseFloat(finalAmount)
-    displayMidAmount.innerHTML = "$" + Number.parseFloat((finalAmount - regFee) * 0.5)
-    displayFinalAmount.innerHTML = "$" + Number.parseFloat((finalAmount - regFee) * 0.5)
+    tipAmountDisplay.innerHTML = "$" + Number.parseFloat(totalAmount).toFixed(2)
+    totalAmountDisplay.innerHTML = "$" + Number.parseFloat(finalAmount).toFixed(2)
+    displayMidAmount.innerHTML = "$" + Number.parseFloat((finalAmount - regFee) * 0.5).toFixed(2)
+    displayFinalAmount.innerHTML = "$" + Number.parseFloat((finalAmount - regFee) * 0.5).toFixed(2)
 
 }
 
